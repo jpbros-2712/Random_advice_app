@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Ubuntu&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root,html,body{
+    height: 100vh;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app{
+    height: 100%;
+    background: url('./images/img.jpg');
+    display: flex;
+    background-size: cover; /* background size is cover otherwise it will be too much zoomed */
+    background-position: center; /*centering the image */
+    justify-content: center;
+    text-align: center; /* it align text as center*/
+    align-items: center; /* it arrage item to center*/
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card{
+    background-color: lightblue;
+    height: 40%;
+    width: 50%;
+    display: flex;
+    /*centering the content of card horizontally and vertically*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*because of button*/
+    border-radius: 35px;
+    border: 3px solid black;
+}
+.advice-data{
+    padding: 60px;
+}
+.btn{
+    background-color: black;
+    height: 40px;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
